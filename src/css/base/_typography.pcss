@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'HiLo-Deco';
+    src: url('../fonts/HiLo-Deco.woff2') format('woff2'),
+        url('../fonts/HiLo-Deco.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'BettyNoir';
+    src: url('../fonts/BettyNoir.woff2') format('woff2'),
+        url('../fonts/BettyNoir.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'CopaseticNF';
+    src: url('../fonts/CopaseticNF.woff2') format('woff2'),
+        url('../fonts/CopaseticNF.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-size: 125%;
+    line-height: 1.5;
+}
+
+body {
+    background-color: #1a2426;
+    background-image: url('../images/pattern-dark-min.png');
+    background-size: 80em;
+    font-size: 1em;
+    font-family: 'BettyNoir';
+    padding: 1em;
+    letter-spacing: 0.01em;
+    color: #81898a;
+}
+
+input,
+select,
+button,
+textarea {
+    text-transform: uppercase;
+    font-family: 'CopaseticNF';
+    letter-spacing: 0.05em;
+    cursor: pointer;
+}
+
+section {
+    box-shadow: 0 0 0.75em rgba(0, 0, 0, 0.5);
+    background-color: #273437;
+    padding: 2em 0;
+    max-width: 69em;
+    margin: 0 auto;
+    background-image: url('../images/pattern-light-min.png');
+    background-size: 35em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #a98238;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    font-family: 'HiLo-Deco', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    display: inline-block;
+    padding: 0.25em 1em;
+    border: 0.05em solid currentColor;
+    text-align: center;
+}
+
+hr {
+    margin-left: 2em;
+    margin-right: 2em;
+    border-width: 0.05em;
+    border-style: solid;
+    color: #81898a;
+    background-color: currentColor;
+    border-color: currentColor;
+    position: relative;
+
+    &:before {
+        content: '';
+        width: 0.5em;
+        height: 0.5em;
+        border-radius: 100%;
+        background-color: currentColor;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: -0.75em auto 0;
+        border: 0.5em solid #273437;
+    }
+}

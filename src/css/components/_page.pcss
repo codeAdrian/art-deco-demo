@@ -1,0 +1,173 @@
+/*------------------------------------------------------------*\
+                       GENERAL PAGE SETUP
+\*------------------------------------------------------------*/
+html,
+body {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+/**
+ * More sensible default box-sizing:
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ */
+
+* {
+    &,
+    &::before,
+    &::after {
+        box-sizing: inherit;
+    }
+}
+
+.ui-card {
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    text-align: center;
+
+    &__imageWrapper {
+        background-image: url('../images/show-card-min.svg');
+        background-size: 100%;
+        background-repeat: no-repeat;
+        padding: 13% 22%;
+    }
+
+    &__image {
+        filter: grayscale(100%);
+    }
+
+    &__title {
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+        margin: 0;
+        font-size: 1.5em;
+    }
+}
+
+.slick-current {
+    cursor: pointer;
+
+    .ui-card {
+        &__imageWrapper {
+            background-image: url('../images/show-card-active-min.svg');
+        }
+
+        &__image {
+            filter: grayscale(0%);
+        }
+
+        &__title {
+            color: #a98238;
+        }
+    }
+
+    hr {
+        color: #a98238;
+    }
+}
+
+.ui-title {
+    display: flex;
+    justify-content: center;
+
+    &__deco {
+        &--center {
+            margin: 0 -0.02em;
+            white-space: nowrap;
+        }
+    }
+
+    img {
+        min-height: 100%;
+    }
+}
+
+select {
+    appearance: none;
+
+    &::-ms-expand {
+        display: none;
+    }
+}
+
+.toolbar {
+    margin-top: -0.1em;
+    padding-bottom: 2em;
+    text-align: center;
+}
+
+.selectWrapper {
+    display: inline-flex;
+    margin: 0 -2.75em;
+
+    &__select {
+        display: inline-block;
+        background-color: transparent;
+        padding: 0.75em 1.5em;
+        border-width: 0;
+        border-bottom: 0.08em solid #a98238;
+        color: #a98238;
+        outline: 0;
+    }
+
+    img {
+        min-height: 100%;
+    }
+}
+
+.selectWrapper__container {
+    position: relative;
+
+    img {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        top: 100%;
+        max-width: 2.5em;
+        margin-top: -0.75em;
+    }
+}
+
+button {
+    appearance: none;
+    background: none;
+    outline: 0;
+    border-width: 0;
+    text-align: center;
+    color: #a98238;
+
+    i {
+        display: inline-block;
+        border-radius: 100%;
+        background-color: #a98238;
+        color: #222;
+        padding: 1em 0.5em;
+        width: 3em;
+        height: 3em;
+        margin-bottom: 1em;
+        font-size: 0.75em;
+    }
+
+    span {
+        display: block;
+    }
+}
+
+.carousel {
+    padding-bottom: 3em;
+}
+
+.carouselControls {
+    display: flex;
+    justify-content: center;
+
+    div {
+        padding-left: 0.75em;
+        padding-right: 0.75em;
+    }
+}

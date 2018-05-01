@@ -1,0 +1,55 @@
+/*------------------------------------------------------------*\
+                       GENERAL MIXINS
+\*------------------------------------------------------------*/
+
+/*
+ * Mixin to drop micro clearfix into a selector. Further reading:
+ * http://www.cssmojo.com/the-very-latest-clearfix-reloaded/
+ */
+
+@define-mixin clearfix {
+    &::after {
+        display: block;
+        clear: both;
+        content: '';
+    }
+}
+
+/*------------------------------------------------------------*\
+                        POSITION MIXINS
+\*------------------------------------------------------------*/
+
+/*
+ * Generic position mixin for better CSS markup
+ * Used by other mixins
+ */
+
+@define-mixin position $position, $top, $right, $bottom, $left {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+/*
+ * Shorthand mixin for absolute positioning
+ * Serves as an alias for `position(absolute, ...)`
+ * @param {Arglist} $args - Offsets
+ * @require {mixin} position
+ */
+
+@define-mixin absolute $top, $right, $bottom, $left {
+    @mixin position absolute, $top, $right, $bottom, $left;
+}
+
+/*
+ * Shorthand mixin for fixed positioning
+ * Serves as an alias for `position(fixed, ...)`
+ * @param {Arglist} $args - Offsets
+ * @require {mixin} position
+ */
+
+@define-mixin fixed $top, $right, $bottom, $left {
+    @mixin position fixed, $top, $right, $bottom, $left;
+}
